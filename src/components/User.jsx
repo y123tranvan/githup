@@ -8,6 +8,13 @@ class User extends React.Component {
     }
     handleOnSubmit =(event) => {
         event.preventDefault();
+        this.props.handleAddUser({
+            id: Math.floor((Math.random() * 1000)  + 1) + '_random',
+            name : this.state.name,
+            email :this.state.email
+        })
+        this.state.name = ''
+        this.state.email= ''
     }
 
     handleName =(event) => {
@@ -39,8 +46,7 @@ class User extends React.Component {
     const numbers = [1,2,3,4,5,6,7];
     const hasNext = this.state.index < numbers.length -1;
     const hasPrevious = this.state.index <= 0 ;
-    const {listUsers} = this.props;
-
+    const {listUsers} = this.props; 
  
     return (
         <Fragment>
@@ -72,7 +78,7 @@ class User extends React.Component {
             <span>{this.state.show ? listUsers.map((user)=> {return (
                 <div key={user.id}>
                 <i> {user.name} -</i>
-                <i> {user.address} </i> 
+                <i> {user.email} </i> 
                 </div>
             )}) : ''}</span>
 
