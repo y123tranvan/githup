@@ -3,10 +3,10 @@ import React from "react";
 class Header extends React.Component {
     render () {
         return (
-            <div class="header">
-            <a href="#default" class="logo">CompanyLogo</a>
-            <div class="header-right">
-              <a class="active" href="#home">Home</a>
+            <div className="header">
+            <a href="#default" className="logo">CompanyLogo</a>
+            <div className="header-right">
+              <a className="active" href="#home">Home</a>
               <a href="#contact">Contact</a>
               <a href="#about">About</a>
             </div>
