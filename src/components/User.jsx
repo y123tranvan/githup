@@ -39,6 +39,8 @@ class User extends React.Component {
     const numbers = [1,2,3,4,5,6,7];
     const hasNext = this.state.index < numbers.length -1;
     const hasPrevious = this.state.index <= 0 ;
+    const {listUsers} = this.props;
+
  
     return (
         <Fragment>
@@ -67,7 +69,12 @@ class User extends React.Component {
             <span>Number : {numbers[this.state.index]} </span>
             <br/>
             <button onClick={(event) => this.handleShow(event)}>{this.state.show ? "Hidden" : "Show"}</button>
-            <span>{this.state.show ? 'Show data' : ''}</span>
+            <span>{this.state.show ? listUsers.map((user)=> {return (
+                <div key={user.id}>
+                <i> {user.name} -</i>
+                <i> {user.address} </i> 
+                </div>
+            )}) : ''}</span>
 
         </Fragment>
     )
