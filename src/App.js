@@ -14,8 +14,7 @@ class App extends React.Component {
       <>
         <React.StrictMode>
           <div className="container">
-          <Header/>
-          <RouterProvider router={router} />
+          <Header/> 
           </div>
         </React.StrictMode>
       </>
