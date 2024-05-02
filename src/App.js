@@ -1,15 +1,24 @@
-// import logo from "./logo.svg";
-import "./App.css";
- 
+import "./App.scss";
 import React from "react";
-import MyComponent from "./components/MyComponent";
+// import {DatePicker , Button } from 'antd';
+// import { Counter } from "./features/counter/Counter";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import ReactDom from "react-dom";
+import { router } from "./router/index.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header/Header.js";
 class App extends React.Component {
- 
   render() {
     return (
-      <div>
-        <MyComponent/>
-      </div>
+      <>
+        <React.StrictMode>
+          <div className="container">
+          <Header/>
+          <RouterProvider router={router} />
+          </div>
+        </React.StrictMode>
+      </>
     );
   }
 }
