@@ -5,7 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import {NavLink} from 'react-router-dom'
 const Header = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar style={{zIndex:10 , opacity:0.7}} expand="lg" className="bg-body-tertiary">
       <Container> 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
